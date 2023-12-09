@@ -1,0 +1,53 @@
+unit unitPrincipal;
+
+interface
+
+uses
+  Winapi.Windows, Winapi.Messages, System.SysUtils, System.Variants, System.Classes, Vcl.Graphics,
+  Vcl.Controls, Vcl.Forms, Vcl.Dialogs, Vcl.Menus;
+
+type
+  TfrmPrincipal = class(TForm)
+    MainMenu1: TMainMenu;
+    Cadastrados1: TMenuItem;
+    Responsvel1: TMenuItem;
+    Alunos1: TMenuItem;
+    AnoLetivo1: TMenuItem;
+    procedure Responsvel1Click(Sender: TObject);
+    procedure Alunos1Click(Sender: TObject);
+    procedure AnoLetivo1Click(Sender: TObject);
+  private
+    { Private declarations }
+  public
+    { Public declarations }
+  end;
+
+var
+  frmPrincipal: TfrmPrincipal;
+
+implementation
+
+{$R *.dfm}
+
+uses unitResponsaveis, unitDM, unitAlunos, unitAnoLetivo;
+
+procedure TfrmPrincipal.Alunos1Click(Sender: TObject);
+begin
+  frmAlunos := TfrmAlunos.Create(nil);
+  frmAlunos.ShowModal;
+  frmAlunos.Free;
+end;
+
+procedure TfrmPrincipal.AnoLetivo1Click(Sender: TObject);
+begin
+  frm
+end;
+
+procedure TfrmPrincipal.Responsvel1Click(Sender: TObject);
+begin
+  frmResponsaveis := TfrmResponsaveis.Create(nil);
+  frmResponsaveis.ShowModal;
+  frmResponsaveis.Free;
+end;
+
+end.

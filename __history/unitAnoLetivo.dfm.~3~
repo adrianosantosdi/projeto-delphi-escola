@@ -1,0 +1,141 @@
+object frmAnoLetivo: TfrmAnoLetivo
+  Left = 0
+  Top = 0
+  Caption = 'Ano Letivos'
+  ClientHeight = 462
+  ClientWidth = 692
+  Color = clBtnFace
+  Font.Charset = DEFAULT_CHARSET
+  Font.Color = clWindowText
+  Font.Height = -11
+  Font.Name = 'Tahoma'
+  Font.Style = []
+  OldCreateOrder = False
+  PixelsPerInch = 96
+  TextHeight = 13
+  object Label1: TLabel
+    Left = 24
+    Top = 112
+    Width = 18
+    Height = 19
+    Caption = 'int'
+    FocusControl = DBEdit1
+    Font.Charset = DEFAULT_CHARSET
+    Font.Color = clWindowText
+    Font.Height = -16
+    Font.Name = 'Tahoma'
+    Font.Style = []
+    ParentFont = False
+  end
+  object Label2: TLabel
+    Left = 24
+    Top = 168
+    Width = 26
+    Height = 19
+    Caption = 'ano'
+    FocusControl = DBEdit2
+    Font.Charset = DEFAULT_CHARSET
+    Font.Color = clWindowText
+    Font.Height = -16
+    Font.Name = 'Tahoma'
+    Font.Style = []
+    ParentFont = False
+  end
+  object Label3: TLabel
+    Left = 24
+    Top = 226
+    Width = 124
+    Height = 19
+    Caption = 'media_aprovacao'
+    FocusControl = DBEdit3
+    Font.Charset = DEFAULT_CHARSET
+    Font.Color = clWindowText
+    Font.Height = -16
+    Font.Name = 'Tahoma'
+    Font.Style = []
+    ParentFont = False
+  end
+  object Label13: TLabel
+    Left = 210
+    Top = 8
+    Width = 313
+    Height = 33
+    Caption = 'Cadastro de Ano Letivo'
+    Font.Charset = DEFAULT_CHARSET
+    Font.Color = clWindowText
+    Font.Height = -27
+    Font.Name = 'Tahoma'
+    Font.Style = [fsBold]
+    ParentFont = False
+  end
+  object DBEdit1: TDBEdit
+    Left = 24
+    Top = 137
+    Width = 57
+    Height = 27
+    DataField = 'int'
+    DataSource = DM.dsAnoLetivo
+    Font.Charset = DEFAULT_CHARSET
+    Font.Color = clWindowText
+    Font.Height = -16
+    Font.Name = 'Tahoma'
+    Font.Style = []
+    ParentFont = False
+    TabOrder = 0
+  end
+  object DBEdit2: TDBEdit
+    Left = 24
+    Top = 193
+    Width = 134
+    Height = 27
+    DataField = 'ano'
+    DataSource = DM.dsAnoLetivo
+    Font.Charset = DEFAULT_CHARSET
+    Font.Color = clWindowText
+    Font.Height = -16
+    Font.Name = 'Tahoma'
+    Font.Style = []
+    ParentFont = False
+    TabOrder = 1
+  end
+  object DBEdit3: TDBEdit
+    Left = 24
+    Top = 251
+    Width = 124
+    Height = 27
+    DataField = 'media_aprovacao'
+    DataSource = DM.dsAnoLetivo
+    Font.Charset = DEFAULT_CHARSET
+    Font.Color = clWindowText
+    Font.Height = -16
+    Font.Name = 'Tahoma'
+    Font.Style = []
+    ParentFont = False
+    TabOrder = 2
+  end
+  object DBCheckBox1: TDBCheckBox
+    Left = 24
+    Top = 284
+    Width = 97
+    Height = 17
+    Caption = 'vigente'
+    DataField = 'vigente'
+    DataSource = DM.dsAnoLetivo
+    Font.Charset = DEFAULT_CHARSET
+    Font.Color = clWindowText
+    Font.Height = -16
+    Font.Name = 'Tahoma'
+    Font.Style = []
+    ParentFont = False
+    TabOrder = 3
+  end
+  object DBNavigator1: TDBNavigator
+    Left = 229
+    Top = 47
+    Width = 296
+    Height = 42
+    DataSource = DM.dsAnoLetivo
+    VisibleButtons = [nbFirst, nbPrior, nbNext, nbLast, nbInsert, nbDelete, nbPost, nbCancel]
+    TabOrder = 4
+  end
+end

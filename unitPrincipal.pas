@@ -4,10 +4,24 @@ interface
 
 uses
   Winapi.Windows, Winapi.Messages, System.SysUtils, System.Variants, System.Classes, Vcl.Graphics,
-  Vcl.Controls, Vcl.Forms, Vcl.Dialogs;
+  Vcl.Controls, Vcl.Forms, Vcl.Dialogs, Vcl.Menus;
 
 type
-  TForm1 = class(TForm)
+  TfrmPrincipal = class(TForm)
+    MainMenu1: TMainMenu;
+    Cadastrados1: TMenuItem;
+    Responsvel1: TMenuItem;
+    Alunos1: TMenuItem;
+    AnoLetivo1: TMenuItem;
+    Series1: TMenuItem;
+    urmas1: TMenuItem;
+    Matricula1: TMenuItem;
+    procedure Responsvel1Click(Sender: TObject);
+    procedure Alunos1Click(Sender: TObject);
+    procedure AnoLetivo1Click(Sender: TObject);
+    procedure Series1Click(Sender: TObject);
+    procedure urmas1Click(Sender: TObject);
+    procedure Matricula1Click(Sender: TObject);
   private
     { Private declarations }
   public
@@ -15,10 +29,55 @@ type
   end;
 
 var
-  Form1: TForm1;
+  frmPrincipal: TfrmPrincipal;
 
 implementation
 
 {$R *.dfm}
+
+uses unitResponsaveis, unitDM, unitAlunos, unitAnoLetivo, unitSeries,
+  unitTurmas, unitMatricula;
+
+procedure TfrmPrincipal.Alunos1Click(Sender: TObject);
+begin
+  frmAlunos := TfrmAlunos.Create(nil);
+  frmAlunos.ShowModal;
+  frmAlunos.Free;
+end;
+
+procedure TfrmPrincipal.AnoLetivo1Click(Sender: TObject);
+begin
+  frmAnoLetivo := TfrmAnoLetivo.Create(nil);
+  frmAnoLetivo.ShowModal;
+  frmAnoLetivo.Free
+end;
+
+procedure TfrmPrincipal.Matricula1Click(Sender: TObject);
+begin
+  frmMatricula := TfrmMatricula.Create(nil);
+  frmMatricula.ShowModal;
+  frmMatricula.Free;
+end;
+
+procedure TfrmPrincipal.Responsvel1Click(Sender: TObject);
+begin
+  frmResponsaveis := TfrmResponsaveis.Create(nil);
+  frmResponsaveis.ShowModal;
+  frmResponsaveis.Free;
+end;
+
+procedure TfrmPrincipal.Series1Click(Sender: TObject);
+begin
+  frmSeries := TfrmSeries.Create(nil);
+  frmSeries.ShowModal;
+  frmSeries.Free
+end;
+
+procedure TfrmPrincipal.urmas1Click(Sender: TObject);
+begin
+  frmTurmas := TfrmTurmas.Create(nil);
+  frmTurmas.ShowModal;
+  frmTurmas.Free;
+end;
 
 end.
